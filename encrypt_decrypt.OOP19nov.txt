@@ -1,0 +1,25 @@
+def encrypt(text, shift):
+    encrypted_text = ""
+    for char in text:
+        if char.isalpha():
+            is_upper = char.isupper()
+            char_code = ord(char) + shift
+            if is_upper:
+                encrypted_text += chr((char_code - 65) % 26 + 65)
+            else:
+                encrypted_text += chr((char_code - 97) % 26 + 97)
+        else:
+            encrypted_text += char
+    return encrypted_text
+
+def decrypt(encrypted_text, shift):
+    return encrypt(encrypted_text, -shift)
+
+text_to_encrypt = input("enter the text to encrypt")
+shift_value = int(input("enter the shift key"))
+
+encrypted_result = encrypt(text_to_encrypt, shift_value)
+print(f"Encrypted: {encrypted_result}")
+
+decrypted_result = decrypt(encrypted_result, shift_value)
+print(f"Decrypted: {decrypted_result}")

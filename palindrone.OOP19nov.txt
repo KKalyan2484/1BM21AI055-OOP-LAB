@@ -1,0 +1,13 @@
+def is_palindrome(word):
+    return word == word[::-1]
+
+def get_palindromes(input_string):
+    words = input_string.split()
+    palindromes = [word for word in words if is_palindrome(word)]
+    return palindromes
+
+input_text = input("enter the text")
+palindrome_list = get_palindromes(input_text)
+
+print("Palindromes in the input text:")
+print(palindrome_list)
