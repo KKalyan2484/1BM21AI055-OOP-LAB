@@ -1,0 +1,30 @@
+class Dog:
+  def __init__(self,name,size,breed,dob):
+    self.name=name
+    self.size=size
+    self.breed='Unknown'
+    self.dob=dob
+    self.dobc=self.dog_years()
+    self.get_name=self.get_name()
+    self.bark_sound=self.bark()
+
+  def bark(self):
+    return f"{self.name} sounds woof!"
+
+  def get_name(self):
+    return f"{self.name} is dog's name"
+
+  def dog_years(self):
+    self.dob=self.dob*7
+    return f"{self.name} age in dog years is {self.dob}"
+
+
+name = input("Enter the name of the dog: ")
+size = input("Enter the dog size (small, big, etc.): ")
+breed = input("Enter the dog breed: ")
+dob = int(input("Enter the dog's age: "))
+
+dog1 = Dog(name, size, breed, dob)
+print(dog1.get_name)
+print(dog1.dobc)
+print(dog1.bark_sound)

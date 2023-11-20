@@ -1,0 +1,32 @@
+class student:
+  pass
+class marks:
+  pass
+
+std1=student()
+marks1=marks()
+std2=student()
+marks2=marks()
+is_std1_instance = isinstance(std1, student)
+is_marks1_instance = isinstance(marks1, marks)
+print(f"Is std1 an instance of student? {is_std1_instance}")
+print(f"Is marks1 an instance of marks? {is_marks1_instance}")
+
+is_std2_instance = isinstance(std2, student)
+is_marks2_instance = isinstance(marks2, marks)
+print(f"Is std2 an instance of student? {is_std2_instance}")
+print(f"Is marks2 an instance of marks? {is_marks2_instance}")
+
+is_std1_subclass = issubclass(student, object)
+is_marks1_subclass = issubclass(marks, object)
+
+
+print(f"Is std1 a subclass of object? {is_std1_subclass}")
+print(f"Is marks1 a subclass of object? {is_marks1_subclass}")
+
+is_std2_subclass = issubclass(student, object)
+is_marks2_subclass = issubclass(marks, object)
+
+print(f"Is std2 a subclass of object? {is_std2_subclass}")
+print(f"Is marks2 a subclass of object? {is_marks2_subclass}")
+
