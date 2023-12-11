@@ -1,0 +1,26 @@
+class student:
+  def __init__(self,name,usn):
+    self.name=name
+    self.usn=usn
+    self.__marks=0
+
+  def get_marks(self):
+    return self.__marks
+
+  def set_marks(self,updated_marks):
+    self.__marks=updated_marks
+
+  def display(self):
+    print(f"student name ={self.name}")
+    print(f"student usn ={self.usn}")   
+    print(f"student marks ={self.__marks}")   
+
+
+name=input("enter the name of student")
+usn=input("enter the usn of student")
+std=student(name,usn)
+std.display()
+marks=int(input('Enter the marks'))
+
+std.set_marks(marks)
+std.display()
